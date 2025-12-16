@@ -7,7 +7,7 @@ This project was developed as part of a software engineering course and follows 
 ## Tech Stack
 
 - Backend: Python, Flask  
-- Frontend: React  
+- Frontend: React, JavaScript, HTML, CSS  
 - Database: SQLite  
 - DevOps: Docker, GitHub Actions (CI/CD)  
 - Design & Planning: Figma, Trello  
@@ -56,5 +56,6 @@ docker run -p 5173:5173 frontend
 
 Open your browser and navigate to:
 http://localhost:5173
+
 
 
