@@ -30,13 +30,15 @@ This project was developed as part of a software engineering course and follows 
 - Dockerized frontend and backend services
 - CI/CD pipelines triggered on push and pull requests
 
-## My Contributions
+## Development Ownership
 
-- Implemented backend API endpoints using Flask
-- Integrated SQLite database with backend services
-- Built and configured CI/CD pipelines using GitHub Actions (YAML workflows)
-- Containerized backend services using Docker
-- Created API contracts and architecture diagrams to guide system integration
+- Designed and implemented the full-stack application, including the React frontend, Flask backend API, and SQLite database.
+- Developed backend REST API endpoints in Flask to support user authentication, product listings, cart management, and order handling.
+- Integrated SQLite as the relational database layer and implemented database-backed persistence for core application features.
+- Containerized both frontend and backend services using Docker to ensure consistent local and deployment environments.
+- Designed and maintained CI/CD pipelines using GitHub Actions (YAML workflows) to automate linting, testing, and build validation.
+- Created API contracts, architectural documentation, and system diagrams to guide development and ensure modular system design.
+
 
 ## How to Run the Application
 
@@ -56,6 +58,7 @@ docker run -p 5173:5173 frontend
 
 Open your browser and navigate to:
 http://localhost:5173
+
 
 
 
