@@ -30,7 +30,7 @@ This project was developed as part of a software engineering course and follows 
 - Dockerized frontend and backend services
 - CI/CD pipelines triggered on push and pull requests
 
-## Development Ownership
+## Development
 
 - Designed and implemented the full-stack application, including the React frontend, Flask backend API, and SQLite database.
 - Developed backend REST API endpoints in Flask to support user authentication, product listings, cart management, and order handling.
@@ -58,6 +58,7 @@ docker run -p 5173:5173 frontend
 
 Open your browser and navigate to:
 http://localhost:5173
+
 
 
 
