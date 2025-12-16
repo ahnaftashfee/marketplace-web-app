@@ -1,0 +1,41 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths: 
+      - frontend/**
+  pull_request:
+    branches: [main, develop]
+    paths: 
+      - frontend/**
+
+jobs:
+  build-and-test:
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps: 
+     - name: Checkout repository
+       uses: actions/checkout@v4
+
+     - name: setup node.js
+       uses: actions/setup-node@v4
+       with:
+         node-version: 25
+         
+     - name: install dependencies
+       run: |
+         npm ci
+         
+     - name: Run lint
+       run: |
+         echo "Running lint..."
+         npm run lint
+         
+#            COMMENTED OUT UNTIL TESTS ARE DONE
+#     - name: Run frontend Testing
+#       run: |
+#         npm test
+  

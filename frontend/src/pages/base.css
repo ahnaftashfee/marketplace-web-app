@@ -1,0 +1,124 @@
+.home-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f9fb;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.search {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.cart-btn {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-btn:hover {
+  background-color: #16a085;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  width: 90%;
+  display: block;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* FORM */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.login-btn {
+  padding: 0.8rem;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #217dbb;
+}
+
+/* CREATE ACCOUNT BUTTON */
+.create-btn {
+  margin-top: 1.2rem;
+  background-color: #2ecc71;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create-btn:hover {
+  background-color: #27ae60;
+}
+
+/* MESSAGE */
+.msg {
+  margin-top: 0.8rem;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* SCROLL BAR */
+.scroll-container {
+  height: 200px; /* Or max-height */
+  overflow-y: auto; /* For vertical scrolling */
+  /* overflow-x: auto; for horizontal scrolling */
+  /* overflow: auto; for both, if needed */
+  padding: 10px;
+}
+

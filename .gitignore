@@ -1,0 +1,8 @@
+backend/marketplace.db
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+#ignored

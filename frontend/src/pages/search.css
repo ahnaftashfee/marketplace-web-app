@@ -1,0 +1,83 @@
+/* Container layout */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make page match seller/cart/login styling  jj*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 15px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search {
+  padding: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.search-btn {
+  padding: 8px 14px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.cart-btn {
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 20px;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Item card styling */
+.item-card {
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.item-title {
+  font-size: 20px;
+}
+
+.item-desc {
+  color: #555;
+  margin: 5px 0;
+}
+
+.item-price {
+  color: #2c7a00;
+  font-weight: bold;
+}

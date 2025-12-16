@@ -1,0 +1,33 @@
+HOW TO RUN THE BACKEND ON YOUR DEVICE:
+
+First, make sure your git bash's open directory is in:
+
+~/CSE2102/fall2025/cse2102-fall25-Team05/backend
+
+Second, run the following command in git bash to build the Docker image (PERIOD INCLUDED):
+
+docker build -t <image-name here, i.e. backend> .
+
+Once the image is built, do the following command:
+
+docker run <image-name>
+
+Then check your docker desktop to see if it's running, if successful, a green dot should be next to your running image name.
+
+HOW TO STOP THE BACKEND AND CLEAN UP ON YOUR DEVICE:
+
+Once done, you can do CTRL + C to stop running the backend image.
+
+However, this does not remove it entirely.
+
+Run the following command to view all docker images present:
+
+docker images
+
+You should see your recently created backend docker image and it's image ID, copy the ID.
+
+Once you have the image ID of the docker image you want to delete, run the following command:
+
+docker rmi -f <image-ID>
+
+If done correctly, run the "docker images" command again and your image should be gone!

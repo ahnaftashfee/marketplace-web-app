@@ -1,0 +1,57 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [ main, dev ]
+    paths: 
+      - backend/**
+  pull_request:
+    branches: [ main, dev ]
+    paths: 
+      - backend/**
+
+jobs:
+  build-and-test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build backend Docker image
+        working-directory: ./backend
+        run: |
+          docker build -t team05-backend .
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: ./backend
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pylint requests
+
+      - name: Run Pylint
+        working-directory: ./backend
+        run: |
+          echo "Running pylint..."
+          pylint $(git ls-files '*.py')
+
+      - name: Start backend container
+        run: |
+          docker rm -f backend 2>/dev/null || true
+          docker run -d -p 5000:5000 --name backend team05-backend
+          sleep 5
+
+      - name: Run Pytest (API tests)
+        working-directory: ./backend
+        env:
+          PYTHONPATH: ${{ github.workspace}}/backend
+        run: |
+          echo "Running pytest..."
+          
+          pytest -v --maxfail=1 --disable-warnings
